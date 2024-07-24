@@ -1,28 +1,8 @@
 # Stock Predictions Model Using KNN
 
-This project explores predicting stock prices using K-Nearest Neighbors (KNN) algorithm. By analyzing historical stock data for Tata Global, we tackle two main problems: classification and regression. The classification model aims to predict whether the stock price will rise or fall, providing buy (+1) or sell (-1) signals. The regression model, on the other hand, predicts the actual closing price of the stock. Using KNN, we experiment with different hyperparameters to optimize model performance and assess the predictions against actual stock price movements.
+This project explores predicting stock prices using the K-Nearest Neighbors (KNN) algorithm by analyzing historical stock data for Tata Global. The primary objectives are to address classification and regression problems, with the classification model predicting whether the stock price will rise or fall, providing buy (+1) or sell (-1) signals, and the regression model predicting the actual closing price. I particularly enjoyed the hands-on experience with real-world financial data, fetching it using the Quandl API, and performing data preprocessing. The process of feature engineering, such as creating new features like the difference between opening and closing prices and high and low prices, was rewarding and significantly impacted the model's performance. However, there are definitely some areas for improvement. Adding more technical indicators like moving averages, RSI, and MACD could make the model even better. While KNN is simple and effective, trying out more complex models like neural networks or gradient boosting machines could give better results. Also, doing more extensive hyperparameter tuning with methods like RandomizedSearchCV or Bayesian optimization might uncover better settings. Future directions for this project include incorporating additional data sources such as news sentiment analysis and macroeconomic indicators to enhance predictive power. Combining KNN with other models, like neural networks or decision trees, could also help. I could also deploy the model as a web application using Flask or Django, which allows users to input stock symbols and receive real-time predictions. This project has been a significant learning experience, combining finance and machine learning in a meaningful way, and I look forward to continuing to refine and expand upon this work.
 
-## Table of Contents
 
-1. [Prerequisites](#prerequisites)
-2. [Libraries Used](#libraries-used)
-3. [Data Collection](#data-collection)
-4. [Data Exploration](#data-exploration)
-5. [Data Visualization](#data-visualization)
-6. [Classification Problem](#classification-problem)
-   - [Feature Engineering](#feature-engineering)
-   - [Target Variable](#target-variable)
-   - [Train-Test Split](#train-test-split)
-   - [KNN Classifier](#knn-classifier)
-   - [Model Evaluation](#model-evaluation)
-   - [Predictions](#predictions)
-7. [Regression Problem](#regression-problem)
-   - [Target Variable](#target-variable-1)
-   - [Train-Test Split](#train-test-split-1)
-   - [KNN Regressor](#knn-regressor)
-   - [Model Evaluation](#model-evaluation-1)
-   - [Predictions](#predictions-1)
-8. [Conclusion](#conclusion)
 
 ## Prerequisites
 
@@ -46,7 +26,7 @@ from sklearn.metrics import accuracy_score
 
 ## Data Collection
 
-We are using Quandl to fetch historical stock data for Tata Global:
+We are using Quandl to fetch historical stock data for our example stock, Tata Global:
 
 ```python
 data = quandl.get('NSE/TATAGLOBAL')
@@ -182,7 +162,3 @@ Generate and display predictions:
 valid = pd.DataFrame({'Actual Class': Y_test_reg, 'Predicted Close Value': predictions})
 valid.head()
 ```
-
-## Conclusion
-
-This project demonstrates the use of KNN for both classification and regression problems to predict stock prices. The classification model predicts buy/sell signals, while the regression model predicts the actual closing prices. Adjusting model parameters and further feature engineering could enhance prediction accuracy.
