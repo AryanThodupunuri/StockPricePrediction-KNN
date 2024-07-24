@@ -6,6 +6,9 @@ However, there are definitely some areas for improvement. Adding more technical 
 
 Future directions for this project include incorporating additional data sources such as news sentiment analysis and macroeconomic indicators to enhance predictive power. Combining KNN with other models, like neural networks or decision trees, could also help. I could also deploy the model as a web application using Flask or Django, which allows users to input stock symbols and receive real-time predictions. This project has been a significant learning experience, combining finance and machine learning in a meaningful way, and I look forward to continuing to refine and expand upon this work.
 
+Source used:
+- https://medium.com/@krisnarengga87/prediction-forecasting-with-machine-learning-algorithms-knn-decision-tree-svm-04b745935e0a
+
 
 
 ## Prerequisites
